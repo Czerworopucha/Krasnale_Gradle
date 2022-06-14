@@ -47,6 +47,7 @@ public class main {
     }
 
 /*    private static void WriteStats(){
+        sout elo
 
     }*/
 
