@@ -10,8 +10,9 @@ public class Dwarf {
     Sex sex = Sex.MALE;
     Status status = Status.SOBER;
     Vital vital = Vital.ALIVE;
+    Profession profession = Profession.DWARF;
 
-    public Dwarf(String name, float age, Sex sex, Status status, float beardLength, int beer, Vital vital) {
+    public Dwarf(String name, float age, Sex sex, Status status, float beardLength, int beer, Vital vital, Profession profession) {
         this.name = name;
         this.age = age;
         this.beardLength = beardLength;
@@ -19,6 +20,7 @@ public class Dwarf {
         this.sex = sex;
         this.status = status;
         this.vital = vital;
+        this.profession = profession;
     }
     public Dwarf(){}
 
@@ -30,6 +32,7 @@ public class Dwarf {
         this.beer = dwarf.beer;
         this.sex = dwarf.sex;
         this.vital = dwarf.vital;
+        this.profession = dwarf.profession;
     }
 
     public void Update(ArrayList<Dwarf> Dwarf_List){
@@ -44,7 +47,6 @@ public class Dwarf {
     }}
 
     public String[] print() {
-        return new String[]  {name , String.valueOf(age) , String.valueOf(beardLength) , String.valueOf(beer) , String.valueOf(sex) , String.valueOf(status) , String.valueOf(vital) };
-
+        return new String[]  {String.valueOf(profession), name , String.valueOf(age) , String.valueOf(beardLength) , String.valueOf(beer) , String.valueOf(sex) , String.valueOf(status) , String.valueOf(vital) };
     }
 }

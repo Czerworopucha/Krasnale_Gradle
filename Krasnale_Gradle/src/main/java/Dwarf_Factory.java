@@ -17,13 +17,13 @@ public class Dwarf_Factory {
 
         for(int n=0; n<children; n++){
             Sex sex = Randomizers.RandomSex();
-            Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.CHILD), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.CHILD), Randomizers.RandomBeers(Maturity.CHILD), Vital.ALIVE);
+            Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.CHILD), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.CHILD), Randomizers.RandomBeers(Maturity.CHILD), Vital.ALIVE, Profession.DWARF);
             Dwarf_List.add(New_Dwarf);
         }
 
         for(int n=0; n<elders; n++){
             Sex sex = Randomizers.RandomSex();
-            Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ELDER), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ELDER), Randomizers.RandomBeers(Maturity.ELDER), Vital.ALIVE);
+            Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ELDER), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ELDER), Randomizers.RandomBeers(Maturity.ELDER), Vital.ALIVE, Profession.ELDER);
             Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 0,0);
             Dwarf_Elder New_Elder = new Dwarf_Elder(New_Worker, 5 + random.nextInt(5));
 
@@ -49,7 +49,7 @@ public class Dwarf_Factory {
 
             for(int m=0; m<miners; m++){
                 Sex sex = Randomizers.RandomSex();
-                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE);
+                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE, Profession.MINER);
                 Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 8 + random.nextInt(4), 5 + random.nextInt(5));
                 Dwarf_Miner New_Miner = new Dwarf_Miner(New_Worker, 0, 0);
                     if(m<overseers){
@@ -61,7 +61,7 @@ public class Dwarf_Factory {
 
             for(int m=0; m<innovators; m++){
                 Sex sex = Randomizers.RandomSex();
-                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE);
+                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE, Profession.INNOVATOR);
                 Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 8 + random.nextInt(4), 5 + random.nextInt(5));
                 Dwarf_Innovator New_Innovator = new Dwarf_Innovator(New_Worker, 0, 0);
                 Dwarf_List.add(New_Innovator);
@@ -69,7 +69,7 @@ public class Dwarf_Factory {
 
             for(int m=0; m<innkeepers; m++){
                 Sex sex = Randomizers.RandomSex();
-                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE);
+                Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE, Profession.INNKEEPER);
                 Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 8 + random.nextInt(4), 5 + random.nextInt(5));
                 Dwarf_Innkeeper New_Innkeeper = new Dwarf_Innkeeper(New_Worker, 0, 0);
                 Dwarf_List.add(New_Innkeeper);
