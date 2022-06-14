@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Dwarf_BabySitter extends Dwarf_Elder{
 
     int babyCapacity=0;
@@ -15,4 +17,14 @@ public class Dwarf_BabySitter extends Dwarf_Elder{
         this.babyCapacity=babyCapacity;
         this.knowledge=knowledge;
     }*/
+
+    public void Update(ArrayList<Dwarf> Dwarf_List){
+        super.Update(Dwarf_List);
+        if(vital == Vital.ALIVE){
+            if(knowledge>0){
+                knowledge-= Dwarf_List.stream().filter(x->x.age < 50).count();
+            }
+            if(knowledge==0) vital=Vital.DEAD;
+        }
+    }
 }

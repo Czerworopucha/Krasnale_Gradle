@@ -33,7 +33,7 @@ public class Dwarf_Factory {
                 Dwarf_List.add(New_Council);
             }
             else{
-                Dwarf_BabySitter New_Sitter = new Dwarf_BabySitter(New_Elder, 5+random.nextInt(5), 5+ random.nextInt(5) );
+                Dwarf_BabySitter New_Sitter = new Dwarf_BabySitter(New_Elder, 5+random.nextInt(5), 500+ random.nextInt(500) );
                 Dwarf_List.add(New_Sitter);
             }
         }
