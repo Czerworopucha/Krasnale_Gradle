@@ -43,5 +43,9 @@ public class Dwarf {
         main.Common_Wealth-=5*main.Technology_Progress;
     }}
 
+    public String[] print() {
+        return new String[]  {name , String.valueOf(age) , String.valueOf(beardLength) , String.valueOf(beer) , String.valueOf(sex) , String.valueOf(status) , String.valueOf(vital) };
+
+    }
 
 }

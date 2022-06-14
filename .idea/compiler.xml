@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="Krasnale_Gradle.Krasnale_Gradle.main" target="17" />
+      <module name="Krasnale_Gradle.Krasnale_Gradle.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

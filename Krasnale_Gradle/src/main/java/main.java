@@ -180,9 +180,20 @@ public class main {
         Starting_Stats();
         Initialization();
         WriteStats();
+        CSV_Writer writer = new CSV_Writer("output.csv");
+        writer.flushCSVFile();
+        writer.saveSimulationData(new String[] {"STARTING_STATE"});
+        writer.saveSimulationData(new String[] {"Name " , "Age " , "Beard_Length " , "Beer " , "Sex " , "Status " , "Vital "});
+        for (Dwarf dwarf:Dwarf_List) {
+            writer.saveSimulationData(dwarf.print());
+        }
         Week_Update(Max_Loops);
         WriteStats();
-        //zapis do pliku metoda
+        writer.saveSimulationData(new String[] {"ENDING_STATE"});
+        writer.saveSimulationData(new String[] {"Name " , "Age " , "Beard_Length " , "Beer " , "Sex " , "Status " , "Vital "});
+        for (Dwarf dwarf:Dwarf_List) {
+            writer.saveSimulationData(dwarf.print());
+        }
     }
 }
 /*
