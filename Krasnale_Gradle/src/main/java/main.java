@@ -168,11 +168,6 @@ public class main {
 
         }
     }
-/*    private static void Array_Printer(){
-        for (Dwarf str : Dwarf_List){
-            System.out.println(Dwarf_List);
-        }
-    }*/
 
 
     public static void main(String[] args) {
@@ -211,12 +206,12 @@ koniec loopów.
 
 Gradle - done
 Statystyki końcowe - done
-zapis do pliku
+zapis do pliku - kinda done
 wywalić building - done
 updaty elderów - done
 adjustment cyferek - done
-porzadek w kodzie
-polskie znaki
+porzadek w kodzie - powiedzmy
+polskie znaki - mam nadzieje
 zakończenie od pieniędzy - wystarczająco by przetrwac 200 dni? - done
 
 */
