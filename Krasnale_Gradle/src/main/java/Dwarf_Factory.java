@@ -7,10 +7,6 @@ public class Dwarf_Factory {
     public static ArrayList<Dwarf> Dwarf_Generator(int Production){
         var Dwarf_List=new ArrayList<Dwarf>();
         Random random = new Random();
-/*        for(int n=0; n<Production; n++){
-            Dwarf New_Dwarf = new Dwarf();
-            Dwarf_List.add(New_Dwarf);
-        }*/
 
         int workers = 60 + random.nextInt(15);
         workers = (workers * Production)/100;
@@ -41,13 +37,6 @@ public class Dwarf_Factory {
                 Dwarf_List.add(New_Sitter);
             }
         }
-
-/*
-        for(int n=0; n<workers; n++){
-            Sex sex = Randomizers.RandomSex();
-            Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, 0, 0, Vital.ALIVE);
-            Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 8 + random.nextInt(4), 5 + random.nextInt(5));
-*/
 
             int miners = 65 + random.nextInt(15);
                 miners = (miners*workers) /100;
@@ -86,45 +75,6 @@ public class Dwarf_Factory {
                 Dwarf_Innkeeper New_Innkeeper = new Dwarf_Innkeeper();
                 Dwarf_List.add(New_Innkeeper);
             }
- //       }
-
-
-
-
- //           int x = random.nextInt(7);
- /*           switch (x) {
-                case 1 -> {
-                    Sex sex = Randomizers.RandomSex();
-                    Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.CHILD), sex, Status.SOBER, 0, 0, Vital.ALIVE );
-                    Dwarf_List.add(New_Dwarf);
-                }
-                case 2 -> {
-                    Sex sex = Randomizers.RandomSex();
-                    Dwarf_Miner New_Miner = new Dwarf_Miner(new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.CHILD), sex, Status.SOBER, 0, 0, Vital.ALIVE), 0, 0, 0, 0 );
-                    Dwarf_List.add(New_Miner);
-                }
-                case 3 -> {
-                    Dwarf_Overseer New_Overseer = new Dwarf_Overseer();
-                    Dwarf_List.add(New_Overseer);
-                }
-                case 4 -> {
-                    Dwarf_Innovator New_Innovator = new Dwarf_Innovator();
-                    Dwarf_List.add(New_Innovator);
-                }
-                case 5 -> {
-                    Dwarf_Innkeeper New_Innkeeper = new Dwarf_Innkeeper();
-                    Dwarf_List.add(New_Innkeeper);
-                }
-                case 6 -> {
-                    Dwarf_Council New_Council = new Dwarf_Council();
-                    Dwarf_List.add(New_Council);
-                }
-                case 0 -> {
-                    Dwarf_BabySitter New_BabySitter = new Dwarf_BabySitter();
-                    Dwarf_List.add(New_BabySitter);
-                }
-            }
-        }*/
 
         return Dwarf_List;
     }

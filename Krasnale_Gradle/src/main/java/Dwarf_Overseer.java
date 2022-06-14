@@ -20,6 +20,7 @@ public class Dwarf_Overseer extends Dwarf_Miner {
             this.subordinates=subordinates;
             this.productivityBonus=productivityBonus;
         }*/
+
     @Override
     public void Update(ArrayList<Dwarf> Dwarf_List) {
         super.Update(Dwarf_List);

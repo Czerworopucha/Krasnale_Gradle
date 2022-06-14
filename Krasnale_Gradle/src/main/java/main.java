@@ -46,6 +46,11 @@ public class main {
         Dwarf_List = Dwarf_Factory.Dwarf_Generator(Production);
     }
 
+/*    private static void WriteStats(){
+
+    }*/
+
+
     private static void Week_Update(int Max_Weeks){
         for(int week_count=1; week_count <= Max_Weeks; week_count++) {
             for (int Loop = 0; Loop < 7; Loop++) {
@@ -89,12 +94,14 @@ public class main {
             System.out.println("---------------------------------------------------------------------------------------------------");
 
             if (Common_Wealth < 5 * (Production-Dead_All)) {
+                System.out.println("Kolonia przertwala: " + week_count + " tygodni.");
                 System.out.println("Kolonia nie poradzila sobie z kryzysem ekonomicznym w " + week_count + " tygodniu rozwoju.");
                 System.out.println("Krasnoludy jeden po drugim padaja ofiarami smierci glodowej,");
                 System.out.println("co prowadzi do zamieszek i calkowitego upadku kolonii");
                 break;
             }
             if (Technology_Progress >= 5) {
+                System.out.println("Kolonia przertwala: " + week_count + " tygodni.");
                 System.out.println("Kolonia prosperuje i wszyscy jej mieszkancy wioda zycie na godnym poziomie.");
                 System.out.println("Poziom rozwoju technologicznego zapewnia wszystkim bezpieczenstwo");
                 System.out.println("i stale zrodla przychodu oraz pozywienia. Pokolenia Krasnoludow ja zamieszkujace");
@@ -102,6 +109,7 @@ public class main {
                 break;
             }
             if (Dead_All == Production) {
+                System.out.println("Kolonia przertwala: " + week_count + " tygodni.");
                 System.out.println("Krasnoludy z całej kolonii spotykaja się przy jednym stole,");
                 System.out.println("aby swietowac ich wlasny dobrobyt oraz bogactwo.");
                 System.out.println("Niestety, dnia nastepnego ich zamilowanie do napojow alkoholowych nie dalo o sobie zapomniec.");
@@ -113,14 +121,15 @@ public class main {
                 break;
             }
             if (week_count==Max_Weeks){
-                System.out.println("Kolonia przetrwala probe czasu.");
-                System.out.println("Po " + week_count + " tygodniach bilans statystyk kolonii jest nastepujacy:");
-                System.out.println("martwi: "+ Dead_All);
+                System.out.println("Kolonia przertwala: " + week_count + " tygodni.");
+                System.out.println("I przetrwala probe czasu.");
                 break;
             }
             if (Common_Wealth >= Dwarf_List.stream().filter(x->x.vital==Vital.ALIVE).count() * 360 * 5 * Technology_Progress){
+                System.out.println("Kolonia przertwala: " + week_count + " tygodni.");
                 System.out.println("Dzieki ciezkiej pracy i wielu wyrzeczeniom, skarbce sa przepelnione drogocennymi metalami.");
                 System.out.println("Zebrane bogactwo jest gwarancja przetrwania kolonii i jej dalszego rozwoju.");
+                System.out.println("Kolonia przertwała: " + week_count + " tygodni.");
                 break;
             }
 
@@ -157,7 +166,7 @@ wszystkie dwarfy martwe?
 koniec loopów.
 
 
-Gradle
+Gradle - done
 Statystyki końcowe
 zapis do pliku
 wywalić building - done
