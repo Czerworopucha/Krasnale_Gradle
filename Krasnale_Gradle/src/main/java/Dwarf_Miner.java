@@ -46,12 +46,5 @@ public class Dwarf_Miner extends Dwarf_Worker{
                     }
                 }
             }
-
         }
     }
-
-
-
-
-//    long Overseers=Dwarf_List.stream().filter(x->x instanceof Dwarf_Overseer).count();
-//    long males=Dwarf_List.stream().filter(x->x.sex==Sex.MALE).count();

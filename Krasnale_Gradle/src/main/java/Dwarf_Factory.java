@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class Dwarf_Factory {
 
-
     public static ArrayList<Dwarf> Dwarf_Generator(int Production){
         var Dwarf_List=new ArrayList<Dwarf>();
         Random random = new Random();
@@ -83,6 +82,5 @@ public class Dwarf_Factory {
         Dwarf New_Dwarf = new Dwarf();
         Dwarf_List.add(New_Dwarf);
     }*/
-
 
 }

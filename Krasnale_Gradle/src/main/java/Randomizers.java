@@ -52,6 +52,4 @@ public class Randomizers {
         if(maturity == Maturity.ELDER) beers = 7000 + random.nextInt(1000);
         return beers;
     }
-
-
 }
