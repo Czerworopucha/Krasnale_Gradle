@@ -49,7 +49,7 @@ public class main {
 
     private static void WriteStats() {
         System.out.println("---------------------------------------------------------------------------------------------------");
-        System.out.println("Skarb panstwa wynosi: " + Common_Wealth + " zlotych monet.");
+        System.out.println("Skarb panstwa wynosi: " + (int)Common_Wealth + " zlotych monet.");
         System.out.print("Technologia jest na poziomie: ");
         switch ((int) (Math.floor(Technology_Progress))) {
             case 1 -> {
