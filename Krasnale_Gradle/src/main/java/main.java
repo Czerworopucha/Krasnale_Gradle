@@ -73,11 +73,11 @@ public class main {
         }
         System.out.println("Zyjace krasnoludy: " + Dwarf_List.stream().filter(x->x.vital==Vital.ALIVE).count());
         System.out.println("Dzieci: " + Dwarf_List.stream().filter(x->x.age < 50).count());
-        System.out.println("Starszyzna: " + Dwarf_List.stream().filter(x->x.age > 250).count());
-        System.out.println("Gornicy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Miner).count());
-        System.out.println("Nadzorcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Overseer).count());
-        System.out.println("Wynalazcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innovator).count());
-        System.out.println("Karczmarze: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innkeeper).count());
+        System.out.println("Starszyzna: " + Dwarf_List.stream().filter(x->x.age > 250).filter(x->x.vital==Vital.ALIVE).count());
+        System.out.println("Gornicy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Miner).filter(x->x.vital==Vital.ALIVE).count());
+        System.out.println("Nadzorcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Overseer).filter(x->x.vital==Vital.ALIVE).count());
+        System.out.println("Wynalazcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innovator).filter(x->x.vital==Vital.ALIVE).count());
+        System.out.println("Karczmarze: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innkeeper).filter(x->x.vital==Vital.ALIVE).count());
         System.out.println("Wypite piwa w trakcie symulacji: " + Pints_All);
         System.out.println("Zmarli w wyniku wypadków: " + Dead_All);
         System.out.println("---------------------------------------------------------------------------------------------------");
@@ -168,12 +168,11 @@ public class main {
 
         }
     }
-    private static void Array_Printer(){
+/*    private static void Array_Printer(){
         for (Dwarf str : Dwarf_List){
             System.out.println(Dwarf_List);
         }
-    }
-
+    }*/
 
 
     public static void main(String[] args) {
@@ -181,7 +180,6 @@ public class main {
         Starting_Stats();
         Initialization();
         WriteStats();
-        System.out.println(Common_Wealth);
         Week_Update(Max_Loops);
         WriteStats();
         //zapis do pliku metoda
