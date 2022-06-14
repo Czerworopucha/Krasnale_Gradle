@@ -4,7 +4,6 @@ public class Dwarf_Elder extends Dwarf{
 
     int reputationLevel=0;
 
-
     public Dwarf_Elder(Dwarf_Worker dwarf_worker, int reputationLevel){
     super((Dwarf)dwarf_worker);
     this.reputationLevel=reputationLevel;
@@ -21,7 +20,7 @@ public class Dwarf_Elder extends Dwarf{
         super.Update(Dwarf_List);
         if(vital == Vital.ALIVE){
             if(main.Technology_Progress>3){
-                main.Common_Wealth -= reputationLevel * ((-1)/(2*main.Technology_Progress-1)+2);
+                main.Common_Wealth -= 0.5 *reputationLevel * ((-1)/(2*main.Technology_Progress-1)+2);
             }
         }
     }

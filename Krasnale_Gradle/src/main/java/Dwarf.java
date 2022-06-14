@@ -47,5 +47,4 @@ public class Dwarf {
         return new String[]  {name , String.valueOf(age) , String.valueOf(beardLength) , String.valueOf(beer) , String.valueOf(sex) , String.valueOf(status) , String.valueOf(vital) };
 
     }
-
 }

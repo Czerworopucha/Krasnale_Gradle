@@ -18,12 +18,15 @@ public class main {
 
     public static void main(String[] args) {
 
+        CSV_Writer writer = new CSV_Writer("output.csv");
+
+        Save_CSV.FlushCSV(writer);
         Stats.Starting_Stats();
         Initialization();
         Stats.WriteStats();
-        Save_CSV.SaveStats("STARTING_STATS");
+        Save_CSV.SaveStats("STARTING_STATS", writer);
         Update.Week_Update(Max_Loops);
         Stats.WriteStats();
-        Save_CSV.SaveStats("ENDING_STATS");
+        Save_CSV.SaveStats("ENDING_STATS", writer);
     }
 }
