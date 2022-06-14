@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -46,10 +47,41 @@ public class main {
         Dwarf_List = Dwarf_Factory.Dwarf_Generator(Production);
     }
 
-/*    private static void WriteStats(){
-        sout elo
-
-    }*/
+    private static void WriteStats() {
+        System.out.println("---------------------------------------------------------------------------------------------------");
+        System.out.println("Skarb panstwa wynosi: " + Common_Wealth + " zlotych monet.");
+        System.out.print("Technologia jest na poziomie: ");
+        switch ((int) (Math.floor(Technology_Progress))) {
+            case 1 -> {
+                System.out.println("Prymitywnym.");
+            }
+            case 2 -> {
+                System.out.println("Podstawowym.");
+            }
+            case 3 -> {
+                System.out.println("Srednio rozwinietym.");
+            }
+            case 4 -> {
+                System.out.println("Rozwinietym.");
+            }
+            case 5 -> {
+                System.out.println("Zaawansowanym.");
+            }
+            case 6 -> {
+                System.out.println("Zaawansowanym");
+            }
+        }
+        System.out.println("Zyjace krasnoludy: " + Dwarf_List.stream().filter(x->x.vital==Vital.ALIVE).count());
+        System.out.println("Dzieci: " + Dwarf_List.stream().filter(x->x.age < 50).count());
+        System.out.println("Starszyzna: " + Dwarf_List.stream().filter(x->x.age > 250).count());
+        System.out.println("Gornicy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Miner).count());
+        System.out.println("Nadzorcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Overseer).count());
+        System.out.println("Wynalazcy: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innovator).count());
+        System.out.println("Karczmarze: " + Dwarf_List.stream().filter(x->x instanceof Dwarf_Innkeeper).count());
+        System.out.println("Wypite piwa w trakcie symulacji: " + Pints_All);
+        System.out.println("Zmarli w wyniku wypadków: " + Dead_All);
+        System.out.println("---------------------------------------------------------------------------------------------------");
+    }
 
 
     private static void Week_Update(int Max_Weeks){
@@ -148,9 +180,10 @@ public class main {
 
         Starting_Stats();
         Initialization();
+        WriteStats();
         System.out.println(Common_Wealth);
         Week_Update(Max_Loops);
-        //Statystyki końcowe
+        WriteStats();
         //zapis do pliku metoda
     }
 }
