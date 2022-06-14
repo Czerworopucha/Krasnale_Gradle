@@ -72,7 +72,7 @@ public class Dwarf_Factory {
                 Sex sex = Randomizers.RandomSex();
                 Dwarf New_Dwarf = new Dwarf(Randomizers.RandomName(sex), Randomizers.RandomAge(Maturity.ADULT), sex, Status.SOBER, Randomizers.RandomBeard(Maturity.ADULT), Randomizers.RandomBeers(Maturity.ADULT), Vital.ALIVE);
                 Dwarf_Worker New_Worker = new Dwarf_Worker(New_Dwarf, 8 + random.nextInt(4), 5 + random.nextInt(5));
-                Dwarf_Innkeeper New_Innkeeper = new Dwarf_Innkeeper();
+                Dwarf_Innkeeper New_Innkeeper = new Dwarf_Innkeeper(New_Worker, 0, 0);
                 Dwarf_List.add(New_Innkeeper);
             }
 
