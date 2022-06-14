@@ -82,7 +82,7 @@ public class main {
                 Dead_Week = 0;
             } else System.out.println("Brak smierci w tym tygodniu.");
 
-            System.out.println("W tym tygodniu wypito: "+ Pints_Week + " Pint piwa w karczmach.");
+            System.out.println("W tym tygodniu wypito: "+ Pints_Week + " kufli piwa w karczmach.");
                 Pints_All += Pints_Week;
                 Pints_Week = 0;
 
