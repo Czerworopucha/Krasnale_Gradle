@@ -199,10 +199,10 @@ koniec loopów.
 
 
 Gradle - done
-Statystyki końcowe
+Statystyki końcowe - done
 zapis do pliku
 wywalić building - done
-updaty elderów
+updaty elderów - done
 adjustment cyferek - done
 porzadek w kodzie
 polskie znaki
