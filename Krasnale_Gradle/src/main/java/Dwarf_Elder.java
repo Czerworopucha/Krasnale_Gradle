@@ -21,7 +21,7 @@ public class Dwarf_Elder extends Dwarf{
         super.Update(Dwarf_List);
         if(vital == Vital.ALIVE){
             if(main.Technology_Progress>3){
-                main.Common_Wealth = reputationLevel * ((-1)/(2*main.Technology_Progress-1)+2);
+                main.Common_Wealth -= reputationLevel * ((-1)/(2*main.Technology_Progress-1)+2);
             }
         }
     }
